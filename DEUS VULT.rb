@@ -1,7 +1,7 @@
 def dv
   print "----------------------------------- \n"
 	print " You Deus Vult my man? say 'true' or 'false'\n"
-	print "----------------------------------- \n"
+  print "----------------------------------- \n"
 
 	vult = gets.chomp
 
