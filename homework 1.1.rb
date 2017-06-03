@@ -1,16 +1,4 @@
 #The analyzer
-def mult(num1, num2)
-	num1.to_f * num2.to_f
-end
-def div(num1, num2)
-	num1.to_f / num2.to_f
-end
-def sub(num1, num2)
-	num1.to_f - num2.to_f
-end
-def mod(num1, num2)
-	num1.to_f%num2.to_f
-end
 print "Howdy there, are you a boy or a girl? \n"
 
 mf = gets.chomp
