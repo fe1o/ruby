@@ -74,7 +74,15 @@ Dir["tipo de arquivo ou arquivo especifico a ser procurado, como "/*.txt" para p
 print File.read("/comics.txt") (le o arquivo especifico)
 FileUtils.cp('arquivo no diretorio de origem', 'arquivo no dirotorio de destino') (copiar e colar arquivos)
 File.open('/Home/comics.txt', 'a') do |f|
-f << "batatat"														( abre o arquivo para voce adicionar algo ao final do arquivo)
+f << "batatat"						( abre o arquivo para voce adicionar algo ao final do arquivo)
 end (para terminar a edição)
 File.mtime("arquivo no diretorio, "/Home/comics.txt"") (tempo em que o arquivo foi editado pela ultima vez)
+class User
+	def initialize	(name(para dar um nome ao usuario)) (método que sempre é chamado quando se cria um objeto)
+	@name = name 	(o @ significa que é uma variavel dessa instância, logo só existe quando o objeto existe)
+	end		(como se define uma classe, sempre o nome da classe com a primeira letra maiuscula)
+end
+user = User.new (criando um objeto dentro dessa classe)
+puts user (printando o objeto)
+puts User.ancestors (lista todas as superclasses que User herda)
 
