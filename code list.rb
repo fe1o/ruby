@@ -92,3 +92,50 @@ x.each{
 	}
 }
 =end
+=begin
+class User
+	def initialize	(name(para dar um nome ao usuario)) #(método que sempre é chamado quando se cria um objeto)
+	@name = name 	#(o @ significa que é uma variavel dessa instância, logo só existe quando o objeto existe)
+	end		#(como se define uma classe, sempre o nome da classe com a primeira letra maiuscula)
+	def run
+	puts "Hey I'm running"
+	end
+	def get_name #(pra poder printar o nome do user citado lá em cima, é preciso criar um método para que tal aconteça)
+	@name
+	end	
+end
+user = User.new#("Luiz"(nome do objeto que também pode ser uma variavel pra se difinir depois))
+user.run #("Com esse comando ele vai printar Hey I'm running, já que ele tem acesso ao metodo run")
+puts user.get_name#(método criado pra printar o nome do user)
+=end
+=begin #Tentativa de um CRUD
+class User
+	attr_accessor :name, :email
+	def initialize(name, email)
+	@name = name
+	@email = email
+	end
+end
+print "Username:"
+name = gets.chomp
+print "Email:"
+email = gets.chomp
+user = User.new(name, email)
+puts user.name
+puts user.email
+=end
+=begin
+#get e set são dois métodos para o get e o set de uma variável, mas com uma mágica de ruby "attr_accessor" a #váriavel tem esses 2 métodos já por natureza
+class User
+	attr_accessor :name #Ao invés de usar user.get_name( o método que foi criado) apena neccesãio o user.name que 																																				#serve tanto pra printar como pra setar
+	def initialize(name)
+	@name = name
+	end
+end
+print "Username:"
+name = gets.chomp
+user = User.new(name)
+puts user.name
+user.name = "Holy"
+puts user.name
+=end
