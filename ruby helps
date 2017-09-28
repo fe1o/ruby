@@ -51,7 +51,7 @@ x.join() (printa os elementos juntos do array e também junta eles)
 +=, -=, *=, /= (incremento e decremento de variaveis, adicionando numeros, subtraindo eles, multiplicando e até dividindo)
 next if/while(eu acho/for(eu acho)(next ele pula passos caso seu valor seja verdadeiro)
 x.max (apresenta o maior número do array)
-x.sort (arruma em ordem crescente)
+x.sort! (arruma em ordem crescente, tanto com números em ordem crescente como ordem alfabetica)
 poem.lines.to_a (faz o poema virar uma lista com cada uma de suas linhas virando um array)
 poem.lines.to_a.reverse (ao invés de suas letras e também linhas serem alteradas de ordem, como cada linha agora é um array apenas o que é reversso é a ordem das linhas)
 #Hash, é um tipo e arranjo e dados como um array sendo que os valores em um hash tem suas chaves para seus respectivos valores.
@@ -69,12 +69,13 @@ x.each {|valor da chave, valor do valor| print #{valor do valor( printa só o va
 			 {|valor da chave, valor do valor| print #{valor da chave( printa só o nome da chave)}
 x.keys (printa as chaves do hash)
 x.values(printa os valores das chaves)
+x.has_key?(checa em boleano se o hash tem ou não essa chave)
 Dir.entries "diretorio" (printa todos os arquivos e pastas do diretorio)
 Dir["tipo de arquivo ou arquivo especifico a ser procurado, como "/*.txt" para procurar todos os arquivos .txt]
 print File.read("/comics.txt") (le o arquivo especifico)
 FileUtils.cp('arquivo no diretorio de origem', 'arquivo no dirotorio de destino') (copiar e colar arquivos)
 File.open('/Home/comics.txt', 'a') do |f|
-f << "batatat"						( abre o arquivo para voce adicionar algo ao final do arquivo)
+f << "batatat"														( abre o arquivo para voce adicionar algo ao final do arquivo)
 end (para terminar a edição)
 File.mtime("arquivo no diretorio, "/Home/comics.txt"") (tempo em que o arquivo foi editado pela ultima vez)
 class User
@@ -85,4 +86,6 @@ end
 user = User.new (criando um objeto dentro dessa classe)
 puts user (printando o objeto)
 puts User.ancestors (lista todas as superclasses que User herda)
+
+
 
