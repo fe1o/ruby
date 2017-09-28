@@ -108,7 +108,8 @@ user = User.new#("Luiz"(nome do objeto que também pode ser uma variavel pra se 
 user.run #("Com esse comando ele vai printar Hey I'm running, já que ele tem acesso ao metodo run")
 puts user.get_name#(método criado pra printar o nome do user)
 =end
-=begin #Tentativa de um CRUD
+=begin
+Tentativa de um CRUD
 class User
 	attr_accessor :name, :email
 	def initialize(name, email)
@@ -138,4 +139,43 @@ user = User.new(name)
 puts user.name
 user.name = "Holy"
 puts user.name
+=end
+=begin
+h = Hash.new
+h["potato"] = "poteito"
+puts h.has_key?("potato")
+=end
+=begin
+Histograma, contador de palavras em um texto podento ter funções variadas
+puts "Pleaaase sair your text:"
+text = gets.chomp
+words = text.split
+frequencies = Hash.new(0)
+words.each{
+  |words|
+  frequencies[words] +=1
+  }
+frequencies = frequencies.sort_by{|a, b| b}
+frequencies.reverse!
+frequencies.each{
+  |words, count|
+  puts words + " " + count.to_s
+  }
+=end
+=begin
+métood para números primos
+def prime(n)
+  puts "That's not an integer." unless n.is_a? Integer
+  is_prime = true
+  for i in 2..n-1
+    if n % i == 0
+      is_prime = false
+    end
+  end
+  if is_prime
+    puts "#{n} is prime!"
+  else
+    puts "#{n} is not prime."
+  end
+end
 =end
