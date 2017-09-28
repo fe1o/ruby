@@ -86,6 +86,26 @@ end
 user = User.new (criando um objeto dentro dessa classe)
 puts user (printando o objeto)
 puts User.ancestors (lista todas as superclasses que User herda)
+#Class
+class User            |Nome da classe sempre começa com letra maiúscula
+Tudo que a classe faz |Assim que se define uma classe
+end                   |
+class Buyer < User | Assim que se faz a herança de uma classe para outra
 
+	def self.batata  | Esse self diz que o método não é da instancia da classe mas sim da classe em si podendo ser     chamado normalmente, sem instanciar nenhum objeto
 
-
+end
+Buyer.batata       | Assim ele seria chamado no caso
+module Walkable|exemplo de um módulo, ele é definido antes da classe e só pode ser chamado caso seja
+	def walk(anywalk)|incuido dentro da classe
+		puts ("I will walk with you")
+	end
+end
+class User
+	include Walkable|desse jeito aqui
+	attr_accessor :name, :email
+	def initialize(name, email)
+	@name = name
+	@email = email
+	end
+end
