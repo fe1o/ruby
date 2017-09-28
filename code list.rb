@@ -163,7 +163,7 @@ frequencies.each{
   }
 =end
 =begin
-métood para números primos
+método para números primos
 def prime(n)
   puts "That's not an integer." unless n.is_a? Integer
   is_prime = true
@@ -178,4 +178,27 @@ def prime(n)
     puts "#{n} is not prime."
   end
 end
+=end
+=begin
+module Walkable
+	def walk(anywalk)
+		puts ("I will walk with you")
+	end
+end
+class User
+	include Walkable
+	attr_accessor :name, :email
+	def initialize(name, email)
+	@name = name
+	@email = email
+	end
+end
+print "Username:"
+name = gets.chomp
+print "Email:"
+email = gets.chomp
+user = User.new(name, email)
+puts user.name
+puts user.email
+user.walk("stroling")
 =end
