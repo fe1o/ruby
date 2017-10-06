@@ -4,8 +4,8 @@ end
 
 hello
 
-metódo depois de definido só precisa usar o nome do método e estruta tudo dentro dele é executado
-
+metódo depois de definido só precisa usar o nome do método e estruta tudo dentro dele é executadox
+x..object_id(Para printar o id do objeto pra saber se são objetos iguais)
 x = x.to_i (converter para inteiro)
 x = x.to_f (converter pra float)
 x = x.to_s (converter para string)
