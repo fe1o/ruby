@@ -9,6 +9,7 @@ x..object_id(Para printar o id do objeto pra saber se são objetos iguais)
 x = x.to_i (converter para inteiro)
 x = x.to_f (converter pra float)
 x = x.to_s (converter para string)
+x = x.to_sym ou x = x.intern (converter para symbolo)
 rand(x) (gerar x numéros não incluindo x)
 x.times{x vezes será executado o/os comando/comandos aqui dentro}
 gets.chomp (a entrada mesmo sendo um número, é considerada apenas como um string)
