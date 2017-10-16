@@ -229,6 +229,7 @@ numbers = [4,2,8,2,4,1,6,5,7]
 puts alphabetize(numbers)
 =end
 =begin
+	Exemplo de um CRUD
 movies = {
   Memento: 3,
   Primer: 4,
@@ -280,5 +281,61 @@ when 'delete'
   end
 else
   puts "Sorry, I didn't understand you."
+end
+=end
+=begin
+	Meu primeiro CRUD
+movies= {
+  kingsman: 10,
+  z007: 9.5,
+  "Super Mario Brothers": 3,
+  }
+
+puts "Hey there, what you wanna do?"
+
+puts "delete, add, display or update a movie?(type wich you wanna do)"
+
+choice = gets.chomp.downcase
+
+case choice
+  when "add"
+  	puts "What movie do you wanna add?"
+  	title = gets.chomp
+  	if movies[title.to_sym].nil?
+  		puts "What rate you give to this movie?(1 to 10)"
+  		rating = gets.chomp
+  		movies[title.to_sym] = rating.to_i
+      puts "#{title} has been added with a rating of #{rating}."
+    else
+      puts "Damn nigga this shit is already on the hash and the rate of #{movies[title.to_sym]}."
+    end
+  when "update"
+  	puts "Which movie do you wanna update?"
+  	title = gets.chomp
+  	if movies[title.to_sym].nil?
+      puts "That's a error nigga, the movie is not even added yet."
+    else
+    	puts "What is the new rate of the #{title}?"
+      rating = gets.chomp
+      movies[title.to_sym] = rating.to_i
+      puts "The new Rating of #{title} is #{rating}"
+    end
+  when "delete"
+  	puts "Which movie do you wanna delete?"
+  	title = gets.chomp
+  	if movies[title.to_sym].nil?
+      puts "That's a error nigga, the movie is not even added yet to be deleted."
+    else
+      movies.delete(title.to_sym)
+      puts "YO nigga you deleted the movie #{title}"
+    end
+	when "display"
+  	puts "Nigger the movies you have here are:"
+  	movies.each{
+      |movie, rating|
+      puts "#{movie}: #{rating}"
+      }
+	else
+  	puts "Error!"
 end
 =end
