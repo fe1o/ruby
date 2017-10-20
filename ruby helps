@@ -23,9 +23,14 @@ x.empty? (se algo foi escrito ou não)
 x.even? (número par)
 x.odd? (número ímpar)
 x.to_a (converte pra um array)
+x.is_a? Symbol (retorna verdadeiro ou falso se o x é ou não um simbolo)
+x.floor(arredonda o número decimal(float) para o inteiro menor mais próximo)
 95.upto(100) { |num| print num, " " }(vai printar os numeros de 95 até 100)
 "L".upto("P") { |letter| puts letter }(vai printar o L maiúsculo até o P maiúsculo)
 "P".downto("L") { |letter| puts letter }(vai printar o P maiúsculo até o L maiúsculo)
+x = Proc.new { do something}  | aqui estou criando um PRoc que é uma forma de transformar um bloco de código em um objeto
+y.select(&x)                  |podendo passar ele por metodos como o select no exemplo
+x = lambda {do something}     | aqui é um lambda que é chamado da mesma forma do Proc também podendo ser chamado pelo método .call
 age.respond_to?(:next) (se a variavel pode utilizar o metodo em parenteses)
 x['algo no string'] = pelo que esse algo vai ser substituido (método rápido de subistituição no string)
 x.gsub!(/o que vai ser substituido/, substituto) (método de substituição)
